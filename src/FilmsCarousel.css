@@ -1,0 +1,145 @@
+/* FilmsCarousel */
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 210px;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carouselSlider {
+    margin-right: auto;
+    margin-left: auto;
+    display: none;
+    max-width: 900px;
+    list-style-type: none;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .carouselSlider {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+}
+
+.carouselSliderActive {
+    display: block;
+}
+
+.carousel-slideContent {
+    margin-bottom: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+@media (max-width: 991px) {
+    .carousel-slideContent {
+        font-size: 18px;
+    }
+}
+
+.carousel-slideTitleData,
+.carousel-slideSource {
+    font-family: "Roboto", arial, sans-serif;
+    font-size: 20px;
+}
+
+@media (min-width: 992px) {
+    .carousel-slideTitleData,
+    .carousel-slideSource {
+        font-size: 18px;
+    }
+}
+
+.carousel-slideSource {
+    font-style: italic;
+    color: #888;
+}
+
+.carouselArrow {
+    position: absolute;
+    top: 50%;
+    display: block;
+    color: #111;
+    cursor: pointer;
+    opacity: 0.75;
+    transform: translateY(-50%);
+    transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.carouselArrow:focus {
+    outline: 0;
+}
+
+.carouselArrow:hover {
+    opacity: 0.5;
+}
+
+.carouselArrowLeft {
+    left: 5%;
+}
+
+.carouselArrowRight {
+    right: 5%;
+}
+
+
+/* Desktop */
+
+@media all and (min-width: 992px) {
+    .carouselArrowLeft {
+        left: 30%;
+    }
+    .carouselArrowRight {
+        right: 30%;
+    }
+}
+
+.carouselIndicators {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carouselIndicators li:nth-of-type(n + 2) {
+    margin-left: 9px;
+}
+
+.carouselIndicator {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #111;
+    cursor: pointer;
+    opacity: 0.15;
+    transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.carouselIndicator:hover {
+    opacity: 0.5;
+}
+
+.carouselIndicatorActive,
+.carouselIndicatorActive:hover {
+    opacity: 0.75;
+}
+
+.leftRocketFa {
+    color: #E88B2E;
+}
+
+.leftRocketFa:hover {
+    color: #ED4642;
+}

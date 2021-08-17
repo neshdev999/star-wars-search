@@ -1,38 +1,733 @@
-.App {
-  text-align: center;
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@font-face {
+    font-family: "anakinmono";
+    src: url("./fonts/anakinmono.ttf") format("truetype");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Character Image */
+
+.characterImageContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.characterImageItem {
+    flex: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.characterImageItem img {
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.characterNameHolder {
+    font-family: "anakinmono";
+    text-align: center;
+    font-size: 30px;
+    color: #2368B6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Physical Description */
+
+.DescContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #DAE7DC;
+    background-color: #000000;
+}
+
+.DescHeader {
+    flex: 1;
+    color: #FD716B;
+    color: #ECECEC;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    margin: 1%;
+    padding: 1%;
+}
+
+
+/* Physical Height */
+
+.characterPhysicalHeightContentContainer {
+    background: rgba(0, 0, 0, 0.1);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.characterPhysicalHeightContent {
+    flex: 1;
+    color: #4AB8E3;
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.heightTag {
+    flex: 1;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 20px;
+    flex: 3;
+}
+
+.heightValue {
+    flex: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: #17313D;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.heightUnit {
+    font-family: 'Times New Roman', Times, serif;
+    color: #212C78;
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+/* Desktop */
+
+@media all and (min-width: 992px) {
+    .characterPhysicalHeightContentContainer {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin-top: 1%;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 2px;
+    }
+    .characterPhysicalHeightContent {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .heightValue {
+        margin: 5px;
+    }
+    .heightUnit {
+        margin: 5px;
+    }
+}
+
+
+/* Physical Mass */
+
+.characterPhysicalMassContentContainer {
+    background-color: #F2F2F2;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 2px;
+}
+
+.characterPhysicalMassContent {
+    color: #297BEC;
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.massTag {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 20px;
+    flex: 3;
+}
+
+.massValue {
+    font-family: 'Times New Roman', Times, serif;
+    color: #17313D;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.massUnit {
+    font-family: 'Times New Roman', Times, serif;
+    color: #212C78;
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+/* Desktop */
+
+@media all and (min-width: 992px) {
+    .characterPhysicalMassContentContainer {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 2px;
+    }
+    .characterPhysicalMassContent {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .massValue {
+        margin: 5px;
+    }
+    .massUnit {
+        margin: 5px;
+    }
+}
+
+
+/* Physical Hair */
+
+.characterPhysicalHairContentContainer {
+    background: rgba(0, 0, 0, 0.1);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 2px;
+}
+
+.characterPhysicalHairContent {
+    color: #4AB8E3;
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.hairTag {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 20px;
+    flex: 3;
+}
+
+.hairValue {
+    font-family: 'Times New Roman', Times, serif;
+    color: #17313D;
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+/* Desktop */
+
+@media all and (min-width: 992px) {
+    .characterPhysicalHairContentContainer {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 2px;
+    }
+    .characterPhysicalHairContent {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .hairValue {
+        margin: 5px;
+    }
+}
+
+
+/* Physical Skin */
+
+.characterPhysicalSkinContentContainer {
+    background-color: #F2F2F2;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 2px;
+}
+
+.characterPhysicalSkinContent {
+    color: #297BEC;
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.skinTag {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 20px;
+    flex: 3;
+}
+
+.skinValue {
+    font-family: 'Times New Roman', Times, serif;
+    color: #17313D;
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+/* Desktop */
+
+@media all and (min-width: 992px) {
+    .characterPhysicalSkinContentContainer {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 2px;
+    }
+    .characterPhysicalSkinContent {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .skinValue {
+        margin: 5px;
+    }
+}
+
+
+/* Physical Eye */
+
+.characterPhysicalEyeContentContainer {
+    background: rgba(0, 0, 0, 0.1);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 2px;
+}
+
+.characterPhysicalEyeContent {
+    color: #4AB8E3;
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.eyeTag {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 20px;
+    flex: 3;
+}
+
+.eyeValue {
+    font-family: 'Times New Roman', Times, serif;
+    color: #17313D;
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+/* Desktop */
+
+@media all and (min-width: 992px) {
+    .characterPhysicalEyeContentContainer {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 2px;
+    }
+    .characterPhysicalEyeContent {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .eyeValue {
+        margin: 5px;
+    }
+}
+
+
+/* Birth Year */
+
+.characterPhysicalBirthYearContentContainer {
+    background-color: #F2F2F2;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 2px;
+}
+
+.characterPhysicalBirthYearContent {
+    color: #297BEC;
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.birthYearTag {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 20px;
+    flex: 3;
+}
+
+.birthYearValue {
+    font-family: 'Times New Roman', Times, serif;
+    color: #17313D;
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+/* Desktop */
+
+@media all and (min-width: 992px) {
+    .characterPhysicalBirthYearContentContainer {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 2px;
+    }
+    .characterPhysicalBirthYearContent {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .birthYearValue {
+        margin: 5px;
+    }
+}
+
+
+/* Gender */
+
+.characterPhysicalGenderContentContainer {
+    background: rgba(0, 0, 0, 0.1);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    border-radius: 2px;
+}
+
+.characterPhysicalGenderContent {
+    color: #4AB8E3;
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.genderTag {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 20px;
+    flex: 3;
+}
+
+.genderValue {
+    font-family: 'Times New Roman', Times, serif;
+    color: #17313D;
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+/* Desktop */
+
+@media all and (min-width: 992px) {
+    .characterPhysicalGenderContentContainer {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 2px;
+    }
+    .characterPhysicalGenderContent {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .genderValue {
+        margin: 5px;
+    }
+}
+
+
+/* Home World */
+
+.homeWorldImageContainer {
+    margin: 1%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeWorldImageContent {
+    flex: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.homeWorldImageContent img {
+    width: 100%;
+}
+
+.homeWorldNameHolder {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 22px;
+    color: #D2313D;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+/* Film */
+
+.CommonUlListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.FilmsUlList {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+    flex: 1;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    color: #59A29D;
+    color: #556D78;
+}
+
+
+/*Species */
+
+.speciesNameHolder {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 22px;
+    color: #4658AF;
+    margin: 10px;
+    padding: 10px;
+}
+
+.SpeciesUlList {
+    flex: 1;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+/* Small Screen */
+
+@media all and (max-width: 992px) {
+    .speciesNameHolder {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+        font-size: 22px;
+        color: #4658AF;
+        margin: 5px;
+        padding: 5px;
+    }
+    .SpeciesUlList {
+        flex: 1;
+        list-style-type: none;
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+
+/* Vehicles */
+
+.vehiclesImageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+.vehiclesImageHolder {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    padding: 1%;
+}
+
+.vehiclesImageHolder img {
+    width: 100%;
+    padding: 10px;
+}
+
+
+/* Desktop */
+
+@media all and (min-width: 992px) {
+    .vehiclesImageContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+    }
+    .vehiclesImageHolder {
+        flex: 1;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 1%;
+        padding: 1%;
+    }
+    .vehiclesImageHolder img {
+        width: auto;
+    }
+}
+
+.vehiclesNameHolder {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 22px;
+    color: #60B6CD;
+    margin: 10px;
+    padding: 10px;
+}
+
+.VehiclesUlList {
+    flex: 1;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Small Screen */
+
+@media all and (max-width: 992px) {
+    .vehiclesNameHolder {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+        font-size: 22px;
+        color: #60B6CD;
+        margin: 5px;
+        padding: 5px;
+    }
+    .VehiclesUlList {
+        flex: 1;
+        list-style-type: none;
+        margin: 5px;
+        padding: 5px;
+        font-size: 22px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
+
+
+/* Star ships */
+
+.starShipsNameHolder {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 22px;
+    color: #EB547D;
+    color: #E1F7DC;
+    color: #6BCC4C;
+    margin: 10px;
+    padding: 10px;
+}
+
+.StarshipsUlList {
+    flex: 1;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+/* Small Screen */
+
+@media all and (max-width: 992px) {
+    .starShipsNameHolder {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+        font-size: 22px;
+        color: #EB547D;
+        color: #E1F7DC;
+        color: #6BCC4C;
+        margin: 5px;
+        padding: 5px;
+    }
+    .StarshipsUlList {
+        flex: 1;
+        list-style-type: none;
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+
+/* Loading Indicator */
+
+.loadingIndicator {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: black;
+    color: white;
+}
+
+.loadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+@keyframes circleMe {
+    50% {
+        transform: rotatez(180deg);
+        border-style: dashed;
+        border-color: #F40017 #ECE160 #F40017 #ECE160;
+    }
+    100% {
+        transform: rotatez(360deg);
+    }
+}
+
+.loaderWithAnimation::before {
+    content: "";
+    color: white;
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    border-radius: 50%;
+    border: 20px solid red;
+    animation: circleMe 1s infinite;
 }

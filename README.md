@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# STAR WARS SEARCH Application 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Using This application you can search information about the STAR WARS Characters. 
 
-## Available Scripts
+For sample viewing , five initial character images are kept. (https://swapi.dev/api/people/)
+1) Luke Skywalker
+2) C-3PO
+3) R2-D2
+4) Darth Vader
+5) Leia Organa
 
-In the project directory, you can run:
+For other remaining characters "mystery_character.jpg" is kept as placeholder image.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Running Locally
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+If you prefer to run locally, you will need the latest LTS of Node.js installed as a prerequisite. You can find the download and installation instructions [here](https://nodejs.org/). Be sure to include npm in the installation options!
 
-### `npm test`
+Once Node.js is available, you can open a terminal (PowerShell, cmd, or otherwise) in this directory and run `npm install`. Once that is complete, run `npm start` to launch the development server in watch mode. This will launch your default browser to the port the development server is running on.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Now you can open the files in the `src` directory in your favorite editor and start hacking! The development server will automatically rebuild and push the changes to the browser. Sometimes the state of the browser can get out of sync though. If you see anything odd or unexeptected try reloading the browser.
 
-### `npm run build`
+# Application Views
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Home Page](/github-images/star_wars_home.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
